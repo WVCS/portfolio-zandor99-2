@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Square Earth</title>
+   <link rel = "stylesheet"
+   type = "text/css"
+   href = "tabsstyle.css"/>
+</head>
+<body>
+<div class="navbar">
+  <a href="pseudoironic.html">Home</a>
+  <a href="https://www.reddit.com/r/juggalo/">Juggalo News</a>
+  <div class="dropdown">
+    <button class="dropbtn">Info
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="slides.html">Why Juggalos are good.</a>
+      <a href="#">Violent J info</a>
+      <a href="shaggy.html">Shaggy 2 Dope Info</a>
+    </div>
+  </div>
+</div>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">Page 1</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Page 2</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Page 3</button>
+</div>
+
+<div id="London" class="tabcontent">
+  <h3>Violent J</h3>
+  <p><img src="ViolentJ.png"></p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>WWE</h3>
+  <p><img src="WWE.png"></p> 
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Who is he really?</h3>
+  <p><img src="imposter.png"></p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+</body>
+</html>
